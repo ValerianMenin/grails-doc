@@ -23,6 +23,13 @@ Since Gradle executes tasks synchronously, and the `bootRun` task will never fin
 ----
 ./gradlew bootRun --parallel
 ----
+For now, the `--parallel` option isn't activated anymore. You should prefer running both servers indididually like that:
+
+[source,bash]
+----
+./gradlew server:bootRun
+./gradlew client:bootRun
+----
 
 This will start both the client and server side applications simultaneously.
 
