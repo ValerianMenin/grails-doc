@@ -15,6 +15,13 @@ Starting with Grails 3.2.1, the Angular 2 profile is available for use. To creat
 grails create-app test-ng -profile angular2
 ----
 
+Angular2 profile also has several features available. To create an application using spring security, json, hibernate, ... feature:
+
+[source,bash]
+----
+grails create-app test-ng --profile angular2 -features json-views,hibernate5,security,asset-pipeline,less-asset-pipeline
+----
+
 A multi-project build will be created with a separate project for the client and server applications. To make things easier, the tasks `test`, `integrationTest`, and `bootRun` have been created in the client application to make executing those tasks easier across the whole application.
 
 Since Gradle executes tasks synchronously, and the `bootRun` task will never finish, it is important to execute it in parallel. At the root of the project:
